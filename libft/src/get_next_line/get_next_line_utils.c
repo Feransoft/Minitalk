@@ -6,11 +6,11 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 17:23:19 by frueda-m          #+#    #+#             */
-/*   Updated: 2023/01/26 22:02:54 by frueda-m         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:00:35 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/get_next_line.h"
+#include "get_next_line.h"
 
 size_t	ft_strlen(const char *str)
 {

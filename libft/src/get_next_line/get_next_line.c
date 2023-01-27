@@ -6,11 +6,11 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 04:17:56 by frueda-m          #+#    #+#             */
-/*   Updated: 2023/01/26 22:03:18 by frueda-m         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:00:44 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/get_next_line.h"
+#include "get_next_line.h"
 #include <unistd.h>
 #include <sys/types.h>
 
