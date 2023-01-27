@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2023/01/27 01:01:18 by frueda-m         ###   ########.fr        #
+#    Updated: 2023/01/27 17:44:25 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,13 +59,16 @@ FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 FTGET_DIR	=	get_next_line/
 FTGET		=	get_next_line get_next_line_utils
 
+FTPRI_DIR	=	ft_printf/
+FTPRI		=	ft_printf_hex ft_printf_ptr ft_printf ft_printf_utils ft_printf_unsigned
+
 SRC_FILES	+=	$(addprefix $(FTIS_DIR),$(FTIS))
 SRC_FILES	+=	$(addprefix $(FTMEM_DIR),$(FTMEM))
 SRC_FILES	+=	$(addprefix $(FTPUT_DIR),$(FTPUT))
 SRC_FILES	+=	$(addprefix $(FTTO_DIR),$(FTTO))
 SRC_FILES	+=	$(addprefix $(FTSTR_DIR),$(FTSTR))
-SRC_FILES	+=	$(addprefix $(FTLST_DIR),$(FTLST))
 SRC_FILES	+=	$(addprefix $(FTGET_DIR),$(FTGET))
+SRC_FILES	+=	$(addprefix $(FTPRI_DIR),$(FTPRI))
 
 SRCS		=	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS		=	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -96,6 +99,7 @@ $(OBJSF):
 			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTGET_DIR)
+			@mkdir -p $(OBJS_DIR)$(FTPRI_DIR)
 
 clean:
 			@$(RM) -rf $(OBJS_DIR)
