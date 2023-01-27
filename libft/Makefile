@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2023/01/26 12:38:43 by frueda-m         ###   ########.fr        #
+#    Updated: 2023/01/27 01:01:18 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,12 +56,16 @@ FTLST_DIR	=	ft_lst/
 FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 				ft_lstiter ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
+FTGET_DIR	=	get_next_line/
+FTGET		=	get_next_line get_next_line_utils
+
 SRC_FILES	+=	$(addprefix $(FTIS_DIR),$(FTIS))
 SRC_FILES	+=	$(addprefix $(FTMEM_DIR),$(FTMEM))
 SRC_FILES	+=	$(addprefix $(FTPUT_DIR),$(FTPUT))
 SRC_FILES	+=	$(addprefix $(FTTO_DIR),$(FTTO))
 SRC_FILES	+=	$(addprefix $(FTSTR_DIR),$(FTSTR))
 SRC_FILES	+=	$(addprefix $(FTLST_DIR),$(FTLST))
+SRC_FILES	+=	$(addprefix $(FTGET_DIR),$(FTGET))
 
 SRCS		=	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS		=	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -91,6 +95,7 @@ $(OBJSF):
 			@mkdir -p $(OBJS_DIR)$(FTTO_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
 			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
+			@mkdir -p $(OBJS_DIR)$(FTGET_DIR)
 
 clean:
 			@$(RM) -rf $(OBJS_DIR)
@@ -105,6 +110,6 @@ re:			fclean all
 			@echo "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
 
 norm:
-	@norminette $(SRCS) $(INCLUDES) | grep -v Norme -B1 || true
+			@norminette $(SRCS) $(INCLUDES) | grep -v Norme -B1 || true
 
 .PHONY:		all clean fclean re norm

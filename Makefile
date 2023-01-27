@@ -82,6 +82,6 @@ fclean: clean
 .c.o:
 		@${GCC} -c ${FLAGS} $(INCLUDE) -o $@ $<
 
-re:		fclean all
+# re:		fclean all
 
 .PHONY: all clean fclean re

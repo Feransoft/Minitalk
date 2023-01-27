@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+.vscode
+
+# Object files
+*.o
+main.c
+
+# Libraries
+*.lib
+*.a
+
+# Executables
+*.out
+client
+server
+
+# Temp files
+*.swp
+
+# Debug files
+*.dSYM/
